@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://hvwaigjdcfld"]
+
+[ext_resource type="PackedScene" uid="uid://bmmy38raffmg2" path="res://tile.tscn" id="1_6qs24"]
+[ext_resource type="Script" path="res://main.gd" id="1_hb0yr"]
+[ext_resource type="PackedScene" uid="uid://dltwrbhhfy2gl" path="res://UI/ui.tscn" id="3_3w7aa"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_hb0yr")
+tile_scene = ExtResource("1_6qs24")
+
+[node name="UI" parent="." instance=ExtResource("3_3w7aa")]

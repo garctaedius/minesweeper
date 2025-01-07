@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmmy38raffmg2"]
+
+[ext_resource type="Script" path="res://Tile.gd" id="1_f8rir"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6u4db"]
+resource_local_to_scene = true
+font_size = 23
+
+[node name="Tile" type="Node2D"]
+script = ExtResource("1_f8rir")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
+color = Color(0.592157, 0.564706, 0.576471, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
+button_mask = 3
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 32.0
+offset_bottom = 32.0
+label_settings = SubResource("LabelSettings_6u4db")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="gui_input" from="Button" to="." method="_on_button_gui_input"]
